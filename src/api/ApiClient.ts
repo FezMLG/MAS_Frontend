@@ -69,7 +69,7 @@ export type CreateEmployeeDto = {
 };
 
 const ApiClient = () => {
-  axios.defaults.baseURL = process.env.API_URL || 'http://localhost:3000/';
+  axios.defaults.baseURL = process.env.API_URL || 'http://localhost:8080/';
   return {
     getReader: async (cardNumber: string) => {
       const response = await axios.get<ReaderDto>(
